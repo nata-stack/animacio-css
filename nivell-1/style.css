@@ -1,0 +1,55 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+.container{
+    background-color: bisque;
+    height: 500px;
+    width: 500px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.pilota{
+    background-color: rgb(141, 141, 5);
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    position: relative;
+    top: 0;
+    left: 0;
+    animation-name: bota;
+    animation-duration: 5s;
+    transition-timing-function: ease-in;
+}
+@keyframes bota{
+    10% {
+        transform: translate(74px, 430px);
+    }
+    20% {
+        transform: translate(140px,200px);
+    }
+    30% {
+        transform: translate(250px, 430px);
+    }
+    40% {
+        transform: translate(430px, 100px);
+    }
+    50%{
+        transform: translate(250px, 430px);
+    }
+    70%{
+        transform: translate(180px, 100px);
+    }
+    90%{
+        transform: translate(50px, 430px);
+    }
+    100%{
+        transform: translate(0, 0);
+    }
+}
+
