@@ -3,6 +3,7 @@
 
 * {
     box-sizing: border-box; 
+    overflow: hidden;
 }
   
 html body {
@@ -23,7 +24,11 @@ body{
     display: flex;
 }
 
-.stripe1::before, .stripe2::before, .stripe3::before{
+.container div{
+    margin: 1px;
+}
+
+.stripe1::before, .stripe2::before, .stripe3::before, .stripe4::before, .stripe5::before{
     display: flex;
     justify-content: center;
     align-items: center;
