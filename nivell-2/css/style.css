@@ -1,0 +1,81 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(248, 240, 240);
+}
+
+.container {
+  background-color: bisque;
+  border-left: 40px solid rgb(240, 165, 165);
+  border-right: 40px solid rgb(240, 165, 165);
+  height: 100vh;
+  width: 890px;
+  margin: auto;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.pilota {
+  display: block;
+  background-color: #8d8d05;
+  height: 30px;
+  width: 30px;
+  box-shadow: inset 120px 90px 95px rgb(207, 34, 101);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: botaX 7s linear 0s infinite alternate, botaY 1s linear 0s infinite alternate;
+}
+
+
+@keyframes botaX {
+  0% {
+    left: 0;
+    width: 23px;
+  }
+  10%{
+    left: 86.5px;
+    width: 30px;
+  }
+  90% {
+    left: 776.3px;
+    width: 28px;
+  }
+  98%{
+    left: 866.2px;
+    width: 25px;
+  }
+  100% {
+    left: 865.5px;
+    width: 20px;
+  }
+  
+}
+
+@keyframes botaY {
+  0% {
+    top: 0;
+    height: 23px;
+  }
+  10%{
+    top: calc(100vh - 285.5px);
+    height: 30px;
+  }
+  90% {
+    top: calc(100vh - 49.5px);
+    height: 28px;
+  }
+  98%{
+    top: calc(100vh - 25.9px);
+    height: 25px;
+  }
+  100% {
+    top: calc(100vh - 20px);
+    height: 20px;
+  }
+}
+
