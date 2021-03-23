@@ -1,0 +1,168 @@
+/*Google font Lato 300*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+* {
+    box-sizing: border-box; 
+    overflow: hidden; /*Para que no haga scroll aunque el contenido aumente*/
+}
+  
+html body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    color: white;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.container div{
+    margin: 1px;
+}
+
+/*para no poner esto que es demasiado repetitivo: .skrew div::before.stripe1::before, .stripe2::before, .stripe3::before, .stripe4::before, .stripe5::before*/
+div.skew div:first-of-type::before{  
+    /*:first-of-type selecciona el primer elemento div del padre div.skew */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 20vw;
+    content: "";
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    opacity: 0.1;    
+    transform: skew(20deg) scaleY(1) translate(0, 0);
+}
+div.skew div:first-of-type:hover::before{ /*lo mismo que antes + :hover*/
+    transform: skew(0deg) scaleX(2) translate(0, 0); 
+}
+
+/*Animaciones*/
+.stripe1, .stripe2, .stripe3, .stripe4, .stripe5{
+    height: 100%;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out; 
+}
+.stripe1{
+    background-color: #244F75;
+    -webkit-animation-name: stripe1;
+            animation-name: stripe1;
+}
+.stripe2{
+    background-color: #60BFBF;
+    -webkit-animation-name: stripe2;
+            animation-name: stripe2;
+}
+.stripe3{
+    background-color: #8C4B7E;
+    -webkit-animation-name: stripe3;
+            animation-name: stripe3;
+}
+.stripe4{
+    background-color: #F8BB44;
+    -webkit-animation-name: stripe4;
+            animation-name: stripe4;
+}
+.stripe5{
+    background-color: #F24B4B;
+    -webkit-animation-name: stripe5;
+            animation-name: stripe5;
+}
+
+@-webkit-keyframes stripe1 {
+    0% {
+    transform: translate3d(-100%, 0, 0);
+    }
+    100% {
+    transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes stripe1 {
+    0% {
+    transform: translate3d(-100%, 0, 0);
+    }
+    100% {
+    transform: translate3d(0, 0, 0);
+    }
+}
+@-webkit-keyframes stripe2 {
+    0% {
+    transform: translate3d(0, 100%, 0);
+    }
+    100% {
+    transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes stripe2 {
+    0% {
+    transform: translate3d(0, 100%, 0);
+    }
+    100% {
+    transform: translate3d(0, 0, 0);
+    }
+}
+@-webkit-keyframes stripe3 {
+    0% {
+    transform: translate3d(0, -100%, 0);
+    }
+    100% {
+    transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes stripe3 {
+    0% {
+    transform: translate3d(0, -100%, 0);
+    }
+    100% {
+    transform: translate3d(0, 0, 0);
+    }
+}
+@-webkit-keyframes stripe4 {
+    0% {
+    transform: translate3d(0, 100%, 0);
+    }
+    100% {
+    transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes stripe4 {
+    0% {
+    transform: translate3d(0, 100%, 0);
+    }
+    100% {
+    transform: translate3d(0, 0, 0);
+    }
+}
+@-webkit-keyframes stripe5 {
+    0% {
+    transform: translate3d(100%, 0, 0);
+    }
+    100% {
+    transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes stripe5 {
+    0% {
+    transform: translate3d(100%, 0, 0);
+    }
+    100% {
+    transform: translate3d(0, 0, 0);
+    }
+}
